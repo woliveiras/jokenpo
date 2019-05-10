@@ -1,0 +1,30 @@
+{
+  "name": "jokenpo",
+  "version": "1.0.0",
+  "description": "Jokenpô (rock–paper–scissors) in Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woliveiras/jokenpo.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "JavaScript",
+    "Game",
+    "CLI",
+    "Command",
+    "Line"
+  ],
+  "author": "William Oliveira <william.oliveiras@pm.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woliveiras/jokenpo/issues"
+  },
+  "homepage": "https://github.com/woliveiras/jokenpo#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
