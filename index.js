@@ -1,5 +1,6 @@
 const readline = require('readline');
-const interfaceOptions = `Entre com alguma opção:
+const start = require('./game');
+const interfaceOptions = `Escolha alguma opção (digite um número e pressione Enter):
 [1] - pedra
 [2] - papel
 [3] - tesoura
@@ -11,7 +12,6 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question(interfaceOptions, (answer) => {
-  console.log(`Escolha: ${answer}`);
-  rl.close();
+rl.question(interfaceOptions, answer => {
+  start(answer, rl);
 });
