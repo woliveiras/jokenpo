@@ -1,4 +1,5 @@
 const {rock, paper, scissors} = require('./validators');
+const {LABELS} = require('./constants');
 
 function start(answer, promptInterface) {
   const userChoice = answer.trim();
@@ -8,12 +9,10 @@ function start(answer, promptInterface) {
   const draw = userChoice === computerChoice;
 
   if (!isValidAnswer) {
-    console.log(
-      'Você digitou uma opção inválida, por favor tente novamente digitando somente um número e pressionando enter'
-    );
+    console.log(LABELS.INVALID_OPTION.COLOR, LABELS.INVALID_OPTION.TEXT);
     promptInterface.close();
   } else if (draw) {
-    console.log('Empatou! Tente de novo. :D');
+    console.log(LABELS.DRAW.COLOR, LABELS.DRAW.TEXT);
     promptInterface.close();
   } else {
     switch (userChoice) {
