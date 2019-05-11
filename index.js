@@ -27,7 +27,7 @@ rl.on('line', answer => {
   rl.setPrompt(
     `\nPONTUAÇÃO: USUÁRIO ${store.scores.user} || COMPUTADOR ${
       store.scores.computer
-    }\n\nJogar de novo? ([1] - pedra, [2] - papel, [3] - tesoura): `
+    }\n\nParar? (pressione CTRL+C)\n\nJogar de novo? ([1] - pedra, [2] - papel, [3] - tesoura): `
   );
   rl.prompt();
 });
