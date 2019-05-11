@@ -1,23 +1,22 @@
+const COLORS = {
+  BG_RED: '\x1b[41m',
+  BG_YELLOW: '\x1b[43m\x1b[30m',
+  BG_GREEN: '\x1b[42m\x1b[30m',
+  RESET: '\x1b[0m\n'
+};
+
 const LABELS = {
-  INVALID_OPTION: {
-    COLOR: '\x1b[31m',
-    TEXT:
-      'Você digitou uma opção inválida, por favor tente novamente digitando somente um número e pressionando enter'
-  },
-  DRAW: {
-    COLOR: '\x1b[33m',
-    TEXT: 'Empatou! Tente de novo. :D'
-  },
-  LOST: {
-    COLOR: '\x1b[31m',
-    TEXT: 'Você perdeu! O computador escolheu:'
-  },
-  WIN: {
-    COLOR: '\x1b[32m',
-    TEXT: 'Você ganhou! O computador escolheu:'
-  }
+  INVALID_OPTION: `${
+    COLORS.BG_RED
+  }Opção inválida, por favor tente novamente digitando somente um número e pressionando enter${
+    COLORS.RESET
+  }`,
+  DRAW: `${COLORS.BG_YELLOW}Empatou! Tente de novo. :D${COLORS.RESET}`,
+  LOST: `${COLORS.BG_RED}Você perdeu! O computador escolheu: `,
+  WIN: `${COLORS.BG_GREEN}Você ganhou! O computador escolheu: `
 };
 
 module.exports = {
-  LABELS
+  LABELS,
+  COLORS
 };

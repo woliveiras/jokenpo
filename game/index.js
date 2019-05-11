@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 const {rock, paper, scissors} = require('./validators');
 const {LABELS} = require('./constants');
 
-function start(answer, promptInterface) {
+function start(answer) {
   const userChoice = answer.trim();
   const validOptions = ['1', '2', '3'];
   const isValidAnswer = validOptions.includes(userChoice);
@@ -9,11 +10,9 @@ function start(answer, promptInterface) {
   const draw = userChoice === computerChoice;
 
   if (!isValidAnswer) {
-    console.log(LABELS.INVALID_OPTION.COLOR, LABELS.INVALID_OPTION.TEXT);
-    promptInterface.close();
+    console.log(`\n${LABELS.INVALID_OPTION}\n`);
   } else if (draw) {
-    console.log(LABELS.DRAW.COLOR, LABELS.DRAW.TEXT);
-    promptInterface.close();
+    console.log(`\n${LABELS.DRAW}\n`);
   } else {
     switch (userChoice) {
       case '1':
@@ -28,8 +27,6 @@ function start(answer, promptInterface) {
       default:
         break;
     }
-
-    promptInterface.close();
   }
 }
 
