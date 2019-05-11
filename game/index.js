@@ -17,17 +17,19 @@ function start(answer, promptInterface) {
   } else {
     switch (userChoice) {
       case '1':
-        rock(computerChoice, promptInterface);
+        rock(computerChoice);
         break;
       case '2':
-        paper(computerChoice, promptInterface);
+        paper(computerChoice);
         break;
       case '3':
-        scissors(computerChoice, promptInterface);
+        scissors(computerChoice);
         break;
       default:
         break;
     }
+
+    promptInterface.close();
   }
 }
 
