@@ -2,7 +2,7 @@
 const {rock, paper, scissors} = require('./choiceValidator');
 const {LABELS} = require('./constants');
 
-function start(answer, store) {
+function run(answer, store) {
   let scores = null;
   const userChoice = answer.trim();
   const validOptions = ['1', '2', '3'];
@@ -34,4 +34,4 @@ function start(answer, store) {
   }
 }
 
-module.exports = start;
+module.exports = run;
