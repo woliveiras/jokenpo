@@ -25,7 +25,7 @@ npm start
 ## Next steps
 
 - [ ] input and output player name
-- [ ] player score
+- [x] player score
 - [ ] best scores (in local file)
 - [ ] best scores in SQLite
 - [ ] a web page with best scores
