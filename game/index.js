@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
-const {rock, paper, scissors} = require('./validators');
+const {rock, paper, scissors} = require('./choiceValidator');
 const {LABELS} = require('./constants');
 
-function start(answer) {
+function start(answer, store) {
+  let scores = null;
   const userChoice = answer.trim();
   const validOptions = ['1', '2', '3'];
   const isValidAnswer = validOptions.includes(userChoice);
@@ -16,17 +17,20 @@ function start(answer) {
   } else {
     switch (userChoice) {
       case '1':
-        rock(computerChoice);
+        scores = rock(computerChoice);
         break;
       case '2':
-        paper(computerChoice);
+        scores = paper(computerChoice);
         break;
       case '3':
-        scissors(computerChoice);
+        scores = scissors(computerChoice);
         break;
       default:
         break;
     }
+
+    store.scores.user += scores.user;
+    store.scores.computer += scores.computer;
   }
 }
 
