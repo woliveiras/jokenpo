@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+/* eslint-disable no-console */
 const readline = require('readline');
 const run = require('./game');
 const store = {
@@ -36,5 +38,8 @@ rl.on('line', answer => {
     
 Parar? (pressione CTRL+C)\n\nJogar de novo? ([1] - pedra, [2] - papel, [3] - tesoura): `
   );
-  rl.prompt();
+  setTimeout(() => {
+    process.stdout.write('\x1b[0f');
+    rl.prompt();
+  }, 1000);
 });
