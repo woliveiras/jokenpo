@@ -28,6 +28,7 @@ And: `jokenpo` in terminal.
 
 - [x] input and output player name
 - [x] player score
+- [ ] best scores
 - [ ] best scores (in local file)
 - [ ] best scores in SQLite
 - [ ] a web page with best scores
