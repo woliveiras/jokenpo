@@ -19,8 +19,10 @@ node index.js
 Or:
 
 ```shell
-npm start
+npm link
 ```
+
+And: `jokenpo` in terminal.
 
 ## Next steps
 
